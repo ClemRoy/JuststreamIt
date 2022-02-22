@@ -1,3 +1,5 @@
+import * as cons from "../const/const.js"
+
 async function fetchgenrepage(url) {
     const response = await fetch(url)
     let movies = await response.json()
@@ -11,5 +13,19 @@ function injectImage(categoryPicture , id ) {
     }
 }
 
+const setslidePosition = (slide, index) => {
+    slide.style.left = cons.SlideSize * index + "px"
+}
 
-export {fetchgenrepage, injectImage}
+const selectCarousel = ( queryselector ) => {
+    const track = document.querySelector(queryselector);
+    const Slides = Array.from(track.children)
+    return Slides
+}
+
+const setCarouselSlidesPos = ( querySelector ) => {
+    let Slides = selectCarousel(querySelector);
+    Slides.forEach(setslidePosition)
+}
+
+export {fetchgenrepage, injectImage, setslidePosition, selectCarousel, setCarouselSlidesPos}

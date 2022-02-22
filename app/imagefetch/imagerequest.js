@@ -6,7 +6,7 @@ const fetchImage = (url, imageID) => {
   .then((res)=> res.ok ? res.json() : null)
   .then((value) => {
     let elt = document.getElementById(imageID);
-    elt.innerHTML = `<img class="moviepicture" src=${value.results[0].image_url} alt=Photo de montage>`
+    elt.innerHTML = `<img class="bestmoviepicture" src=${value.results[0].image_url} alt=Photo de montage>`
   })
 };
 

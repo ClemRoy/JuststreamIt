@@ -14,8 +14,21 @@ const CAT3Data = await index.collectCategoryURL(index.CAT3);
 const CAT3Pic = await index.collectCategoryImagesURL(index.CAT3);
 
 
+
+
 index.fetchImage(`${index.URISTART}${index.BEST}`, "bestMoviePicture");
 index.injectImage(BestCatPictures, "#rowBestRankingCategory li");
 index.injectImage(CAT1Pic, "#rowCategory1 li");
 index.injectImage(CAT2Pic, "#rowCategory2 li");
 index.injectImage(CAT3Pic, "#rowCategory3 li");
+
+
+index.setCarouselSlidesPos("#rowBestRankingCategory .carousel__track")
+index.setCarouselSlidesPos("#rowCategory1 .carousel__track")
+index.setCarouselSlidesPos("#rowCategory2 .carousel__track")
+index.setCarouselSlidesPos("#rowCategory3 .carousel__track")
+
+
+
+const nextButton = document.querySelector(".carousel__button--right")
+const prevButton = document.querySelector(".carousel__button--left")

@@ -1,6 +1,8 @@
 html, body {
     margin: 0px;
     padding: 0px;
+    height: 100%;
+    width: 100%;
     background-color: $backgroundColor;
     color: whitesmoke;
 }
@@ -12,6 +14,85 @@ header {
 
 
 #background {
-    object-fit: contain;
+    width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    padding-inline-start: 0px;
+}
+
+.bestRankingMovie {
+    height: 400px;
+}
+
+.moviepicture {
+    align-self: center;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.carousel {
+    background-color: $carouselBackground;
+    position: relative;
+    height: 40vh;
+    width: 100%;
+}
+
+.carousel__track-container {
+    position: relative;
+    height: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+.carousel__track {
+    position: relative;
+    list-style: none;
+    height: 100%;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    overflow-x: hidden;
+}
+
+.carousel__slide {
+    position: absolute;
+    min-width: 20%;
+    height: 100%;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.moviepicture {
+    object-fit: fill;
+}
+
+.carousel__button {
+    position: absolute;
+    top: 50%;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.carousel__button img {
+    width: 20px;
+}
+
+.carousel__button--right {
+    right: 1px;
+    z-index: 1;
+}
+
+.carousel__button--left {
+    left: 1px;
+    z-index: 1;
 }
