@@ -43,24 +43,26 @@ ul {
 }
 
 .carousel__track-container {
+    background-color: $backgroundColor;
+    overflow: clip;
     position: relative;
     height: 100%;
     margin-top: 0px;
     margin-bottom: 0px;
     padding: 0px;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .carousel__track {
     position: relative;
     list-style: none;
     height: 100%;
-    margin-left: 25px;
-    margin-right: 25px;
     margin-top: 0px;
     margin-bottom: 0px;
     padding-top: 0px;
     padding-bottom: 0px;
-    overflow-x: hidden;
+    transition: transform 250ms erase-in;
 }
 
 .carousel__slide {

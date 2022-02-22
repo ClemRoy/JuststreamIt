@@ -17,7 +17,7 @@ function addToImagesURLDataArray(imagesUrlArray, response, numberToSave=7) {
       movieNumber ++;
   }
   return imagesUrlArray
-}
+};
 
 
 async function collectCategoryImagesURL( endPoint , numberToSave=7) {
@@ -27,7 +27,7 @@ async function collectCategoryImagesURL( endPoint , numberToSave=7) {
   let secondPage = await fetchgenrepage(firstpage.next)
   addToImagesURLDataArray(moviesImagesURL,secondPage, numberToSave)
   return moviesImagesURL
-}
+};
 
 
 

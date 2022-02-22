@@ -1,5 +1,5 @@
-import { URISTART, BEST, CAT1, CAT2, CAT3, SlideSize } from "./const/const.js";
-import { fetchgenrepage, injectImage, setslidePosition, selectCarousel, setCarouselSlidesPos } from "./base/base.js";
+import { URISTART, BEST, CAT1, CAT2, CAT3, SlideSize,BESTCATDOC,CAT1DOC,CAT2DOC,CAT3DOC } from "./const/const.js";
+import { fetchgenrepage, injectImage, setslidePosition, selectCarousel, setCarouselSlidesPos, addNextButon, addPrevButon} from "./base/base.js";
 import { addToURLDataArray, collectCategoryURL } from "./datafetch/urlrequest.js";
 import { fetchImage, addToImagesURLDataArray, collectCategoryImagesURL } from "./imagefetch/imagerequest.js";
 
@@ -10,6 +10,10 @@ export {
     CAT2,
     CAT3,
     SlideSize,
+    BESTCATDOC,
+    CAT1DOC,
+    CAT2DOC,
+    CAT3DOC,
     fetchgenrepage,
     injectImage,
     addToURLDataArray,
@@ -19,5 +23,7 @@ export {
     collectCategoryImagesURL,
     setslidePosition,
     selectCarousel,
-    setCarouselSlidesPos
+    setCarouselSlidesPos,
+    addNextButon,
+    addPrevButon
 }
