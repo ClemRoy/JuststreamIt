@@ -1,4 +1,4 @@
-import * as cons from "../const/const.js"
+import { picSize } from "../../main.js"
 
 async function fetchgenrepage(url) {
     const response = await fetch(url)
@@ -13,56 +13,39 @@ function injectImage(categoryPicture , id ) {
     }
 }
 
-const setslidePosition = (slide, index) => {
-    slide.style.left = cons.SlideSize * index + "px"
-}
-
-const selectCarousel = ( queryselector ) => {
-    const track = document.querySelector(queryselector);
-    const Slides = Array.from(track.children)
-    return Slides
-}
-
-const setCarouselSlidesPos = ( querySelector ) => {
-    let Slides = selectCarousel(querySelector);
-    Slides.forEach(setslidePosition)
-}
-
-const moveToSlide = (track, currentSlide, targetslide) => {
-    if ( targetslide != null ) {
-        track.style.transform = 'translateX(-' + targetslide.style.left + ')';
-        currentSlide.classList.remove('current-slide');
-        targetslide.classList.add('current-slide')
-    }
+const addSlider = (carouselDocument) => {
+    const CarouselTrack = carouselDocument.querySelector(".carousel__track");
+    CarouselTrack.addEventListener("transitionend", function() {
+        CarouselTrack.appendChild(CarouselTrack.firstElementChild);
+        CarouselTrack.style.transition = "none";
+        CarouselTrack.style.transform = `translate(0)`;
+        setTimeout(function() {
+            CarouselTrack.style.transition = "all 0.5s";
+        })
+    })
 }
 
 
 const addNextButon = (carouselDocument) => {
-    const NextButton = carouselDocument.querySelector(".carousel__button--right")
+    const CarouselTrack = carouselDocument.querySelector(".carousel__track");
+    const NextButton = carouselDocument.querySelector(".carousel__button--right");
     NextButton.addEventListener("click", e=>{
-        const CarouselTrack = carouselDocument.querySelector(".carousel__track")
-        const currentSlide = CarouselTrack.querySelector(".current-slide")
-        const nextSlide = currentSlide.nextElementSibling;
-        moveToSlide(CarouselTrack, currentSlide, nextSlide)
+        CarouselTrack.style.transform = `translate(-${picSize}px)`
     })
 }
 
 const addPrevButon = (carouselDocument) => {
-    const PrevButton = carouselDocument.querySelector(".carousel__button--left")
-    PrevButton.addEventListener("click", e=>{
-        const CarouselTrack = carouselDocument.querySelector(".carousel__track")
-        const currentSlide = CarouselTrack.querySelector(".current-slide")
-        const nextSlide = currentSlide.previousElementSibling;
-        moveToSlide(CarouselTrack, currentSlide, nextSlide)
+    const CarouselTrack = carouselDocument.querySelector(".carousel__track");
+    const NextButton = carouselDocument.querySelector(".carousel__button--left");
+    NextButton.addEventListener("click", e=>{
+        CarouselTrack.style.transform = `translate(${picSize}px)`
     })
 }
 
 export {
     fetchgenrepage,
     injectImage,
-    setslidePosition,
-    selectCarousel,
-    setCarouselSlidesPos,
     addNextButon,
-    addPrevButon
+    addPrevButon,
+    addSlider
 }

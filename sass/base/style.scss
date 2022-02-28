@@ -52,9 +52,11 @@ ul {
     padding: 0px;
     margin-left: 25px;
     margin-right: 25px;
+    display: flex;
 }
 
 .carousel__track {
+    display: flex;
     position: relative;
     list-style: none;
     height: 100%;
@@ -62,15 +64,20 @@ ul {
     margin-bottom: 0px;
     padding-top: 0px;
     padding-bottom: 0px;
-    transition: transform 250ms erase-in;
+    transition: all 0.5s;
 }
 
 .carousel__slide {
-    position: absolute;
+    flex-basis: 20%;
     min-width: 20%;
     height: 100%;
     padding-right: 5px;
     padding-left: 5px;
+    flex-shrink: 0;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
 }
 
 .moviepicture {
