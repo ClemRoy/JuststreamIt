@@ -17,24 +17,31 @@
             </h1>
         </header>
         <div class="bestRankingMovie">
-            <h2>Meilleur film Placeholder</h2>
-            <div id="bestMoviePicture"></div>
+            <div class="bestRankingMovieInfo">
+                <h1>Meilleur film</h1>
+                <h2>Titre: <div class="bestMovieTitle"></div>
+                </h2>
+                <h2>Déscription: <div class="bestMovieDescr"></div>
+                </h2>
+                <button id="bestMovieButton">Plus d'informations</button>
+            </div>
+            <div class="bestMoviePictureContainer"></div>
         </div>
         <div id="rowBestRankingCategory">
-            <h2>Selection Meilleur film Placeholder</h2>
+            <h1>Selection des Meilleurs films</h1>
             <div class="carousel">
                 <button class="carousel__button carousel__button--left">
                     <img src="images/left-arrow.svg" alt="left-arrow">
                 </button>
                 <div class="carousel__track-container">
                     <ul class="carousel__track">
-                        <li class="carousel__slide current-slide"></li>
-                        <li class="carousel__slide"></li>
-                        <li class="carousel__slide"></li>
-                        <li class="carousel__slide"></li>
-                        <li class="carousel__slide"></li>
-                        <li class="carousel__slide"></li>
-                        <li class="carousel__slide"></li>
+                        <li id="bestCatM0" class="carousel__slide"></li>
+                        <li id="bestCatM1" class="carousel__slide"></li>
+                        <li id="bestCatM2" class="carousel__slide"></li>
+                        <li id="bestCatM3" class="carousel__slide"></li>
+                        <li id="bestCatM4" class="carousel__slide"></li>
+                        <li id="bestCatM5" class="carousel__slide"></li>
+                        <li id="bestCatM6" class="carousel__slide"></li>
                     </ul>
                 </div>
                 <button class="carousel__button carousel__button--right">
@@ -43,20 +50,20 @@
             </div>
         </div>
         <div id="rowCategory1">
-            <h2>Category 1 Placeholder</h2>
+            <h1>Categorie 1: Action</h1>
             <div class="carousel">
                 <button class="carousel__button carousel__button--left">
                     <img src="images/left-arrow.svg" alt="left-arrow">
                 </button>
                 <div class="carousel__track-container">
                     <ul class="carousel__track">
-                        <li class="carousel__slide current-slide"></li>
-                        <li class="carousel__slide"></li>
-                        <li class="carousel__slide"></li>
-                        <li class="carousel__slide"></li>
-                        <li class="carousel__slide"></li>
-                        <li class="carousel__slide"></li>
-                        <li class="carousel__slide"></li>
+                        <li id="cat1M0" class="carousel__slide"></li>
+                        <li id="cat1M1" class="carousel__slide"></li>
+                        <li id="cat1M2" class="carousel__slide"></li>
+                        <li id="cat1M3" class="carousel__slide"></li>
+                        <li id="cat1M4" class="carousel__slide"></li>
+                        <li id="cat1M5" class="carousel__slide"></li>
+                        <li id="cat1M6" class="carousel__slide"></li>
                     </ul>
                 </div>
                 <button class="carousel__button carousel__button--right">
@@ -65,20 +72,20 @@
             </div>
         </div>
         <div id="rowCategory2">
-            <h2>Category 2 Placeholder</h2>
+            <h1>Categorie 2: Sci-Fi</h1>
             <div class="carousel">
                 <button class="carousel__button carousel__button--left">
                     <img src="images/left-arrow.svg" alt="left-arrow">
                 </button>
                 <div class="carousel__track-container">
                     <ul class="carousel__track">
-                        <li class="carousel__slide current-slide"></li>
-                        <li class="carousel__slide"></li>
-                        <li class="carousel__slide"></li>
-                        <li class="carousel__slide"></li>
-                        <li class="carousel__slide"></li>
-                        <li class="carousel__slide"></li>
-                        <li class="carousel__slide"></li>
+                        <li id="cat2M0" class="carousel__slide"></li>
+                        <li id="cat2M1" class="carousel__slide"></li>
+                        <li id="cat2M2" class="carousel__slide"></li>
+                        <li id="cat2M3" class="carousel__slide"></li>
+                        <li id="cat2M4" class="carousel__slide"></li>
+                        <li id="cat2M5" class="carousel__slide"></li>
+                        <li id="cat2M6" class="carousel__slide"></li>
                     </ul>
                 </div>
                 <button class="carousel__button carousel__button--right">
@@ -87,20 +94,20 @@
             </div>
         </div>
         <div id="rowCategory3">
-            <h2>Category 3 Placeholder</h2>
+            <h1>Categorie 3: Animation</h1>
             <div class="carousel">
                 <button class="carousel__button carousel__button--left">
                     <img src="images/left-arrow.svg" alt="left-arrow">
                 </button>
                 <div class="carousel__track-container">
                     <ul class="carousel__track">
-                        <li class="carousel__slide current-slide"></li>
-                        <li class="carousel__slide"></li>
-                        <li class="carousel__slide"></li>
-                        <li class="carousel__slide"></li>
-                        <li class="carousel__slide"></li>
-                        <li class="carousel__slide"></li>
-                        <li class="carousel__slide"></li>
+                        <li id="cat3M0" class="carousel__slide"></li>
+                        <li id="cat3M1" class="carousel__slide"></li>
+                        <li id="cat3M2" class="carousel__slide"></li>
+                        <li id="cat3M3" class="carousel__slide"></li>
+                        <li id="cat3M4" class="carousel__slide"></li>
+                        <li id="cat3M5" class="carousel__slide"></li>
+                        <li id="cat3M6" class="carousel__slide"></li>
                     </ul>
                 </div>
                 <button class="carousel__button carousel__button--right">
@@ -109,6 +116,27 @@
             </div>
         </div>
         <div id="footer">
+        </div>
+    </div>
+    <div id="modal-container" class="modal-container">
+        <div class="modal">
+            <div class="modalContent">
+                <div class="modalInformation">
+                    <h2> Titre: <div id="modalTitle"></div></h2>
+                    <h2>Genre: <div id="modalGenre"></div></h2>
+                    <h2>Date de sortie: <div id="modalDate"></div></h2>
+                    <h2>Rating: <div id="modalRating"></div></h2>
+                    <h2>Score Imdb: <div id="modalImdb"></div></h2>
+                    <h2>Réalisateur: <div id="modalRealisator"></div></h2>
+                    <h2>Acteurs: <div id="modalActors"></div></h2>
+                    <h2>Durée: <div id="modalDuration"></div></h2>
+                    <h2>Parys d'origine: <div id="modalOrigin"></div></h2>
+                    <h2>Résultats au Box office: <div id="modalBoxoffice"></div></h2>
+                    <h2>Résumé: <div id="modalSynopsis"></div></h2>
+                </div>
+                <div class="modalPicture"></div>
+            </div>
+            <button id="closeModale">Cliquez Ici pour fermer la fenêtre</button>
         </div>
     </div>
 </body>

@@ -1,9 +1,26 @@
-import { picSize } from "../../main.js"
+import { picSize, modal_container } from "../../main.js"
+
+async function InjectBest(url ) {
+    const response = await fetch(url)
+    let movie = await response.json()
+    let picture = document.querySelector(".bestMoviePictureContainer")
+    let title = document.querySelector(".bestMovieTitle")
+    let descr = document.querySelector(".bestMovieDescr")
+    picture.innerHTML = `<img class="bestMoviePicture" src=${movie.image_url} alt=Photo de montage>`;
+    title.innerHTML = movie.title
+    descr.innerHTML = movie.description
+  }
 
 async function fetchgenrepage(url) {
     const response = await fetch(url)
     let movies = await response.json()
     return movies
+}
+
+async function fetchmoviepage(url) {
+    const response = await fetch(url)
+    let movie = await response.json()
+    return movie
 }
 
 function injectImage(categoryPicture , id ) {
@@ -31,6 +48,7 @@ const addNextButon = (carouselDocument) => {
     const NextButton = carouselDocument.querySelector(".carousel__button--right");
     NextButton.addEventListener("click", e=>{
         CarouselTrack.style.transform = `translate(-${picSize}px)`
+        CarouselTrack.parentElement.style.justifyContent = "flex-start"
     })
 }
 
@@ -39,13 +57,26 @@ const addPrevButon = (carouselDocument) => {
     const NextButton = carouselDocument.querySelector(".carousel__button--left");
     NextButton.addEventListener("click", e=>{
         CarouselTrack.style.transform = `translate(${picSize}px)`
+        CarouselTrack.parentElement.style.justifyContent = "flex-end"
     })
 }
 
+const AddModalOpeningEvent = (document) => {
+    let buttons = document.querySelectorAll(".moviepicture")
+    for (let button of buttons) {
+        button.addEventListener('click', ()=> {
+            modal_container.classList.add('show')
+        })
+    }
+}
+
 export {
+    InjectBest,
     fetchgenrepage,
+    fetchmoviepage,
     injectImage,
     addNextButon,
     addPrevButon,
-    addSlider
+    addSlider,
+    AddModalOpeningEvent
 }

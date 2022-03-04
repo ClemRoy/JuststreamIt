@@ -4,7 +4,17 @@ html, body {
     height: 100%;
     width: 100%;
     background-color: $backgroundColor;
-    color: whitesmoke;
+    color: $mainfont;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.2em;
+    display: inline;
+
 }
 
 header {
@@ -25,7 +35,27 @@ ul {
 }
 
 .bestRankingMovie {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
     height: 400px;
+}
+
+.bestMoviePictureContainer {
+    width: 50%;
+    height: 100%;
+    flex: 1;
+}
+
+.bestRankingMovieInfo {
+    flex: 1;
+
+}
+
+.bestMoviePicture {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
 }
 
 .moviepicture {
@@ -82,6 +112,7 @@ ul {
 
 .moviepicture {
     object-fit: fill;
+    cursor: pointer;
 }
 
 .carousel__button {
@@ -104,4 +135,82 @@ ul {
 .carousel__button--left {
     left: 1px;
     z-index: 1;
+}
+
+#bestMovieButton {
+    color: $mainfont;
+    background-color: $modalbutton;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px;
+    padding: 10px 25px;
+    margin: 10px;
+    cursor: pointer;
+
+}
+
+.bestMovieTitle {
+    margin: 10px;
+}
+
+.bestMovieDescr {
+    margin: 10px;
+}
+
+.modal-container {
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $modalbackground;
+}
+
+.modal-container.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 10px 10px;
+    background-color: $modalwindow;
+    width: 60%;
+    height: 60%;
+    justify-content: center;
+    align-content: center;
+}
+
+.modalContent {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.modalInformation {
+    height: 100%;
+    width: 60%;
+}
+
+.modalPicture {
+    height: 100%;
+    width: 40%;
+}
+
+#closeModale {
+    align-self: center;
+    background-color: $modaleclosing;
+    height: 8%;
+    width: 10%;
+    color: $mainfont;
+    cursor: pointer;
 }
