@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   margin: 0px;
   padding: 0px;
   height: 100%;
@@ -238,16 +239,30 @@ ul {
 }
 
 .modalInformation {
+  padding: 1vh;
+  margin: 1vh;
   height: 100%;
   width: 60%;
 }
 
 .modalPicture {
   height: 100%;
+  width: 100%;
+  padding: 1vh;
+}
+
+.modalInfoContent {
+  display: inline;
+}
+
+.modalPictureContainer {
+  margin: 2%;
+  height: 100%;
   width: 40%;
 }
 
 #closeModale {
+  margin-bottom: 2%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;

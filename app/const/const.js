@@ -9,8 +9,6 @@ const CAT1DOC = document.querySelector("#rowCategory1")
 const CAT2DOC = document.querySelector("#rowCategory2")
 const CAT3DOC = document.querySelector("#rowCategory3")
 
-
-
 export {
     URISTART,
     BEST,

@@ -21,9 +21,9 @@
                 <h1>Meilleur film</h1>
                 <h2>Titre: <div class="bestMovieTitle"></div>
                 </h2>
+                <button id="bestMovieButton">Plus d'informations</button><br>
                 <h2>Déscription: <div class="bestMovieDescr"></div>
                 </h2>
-                <button id="bestMovieButton">Plus d'informations</button>
             </div>
             <div class="bestMoviePictureContainer"></div>
         </div>
@@ -35,13 +35,13 @@
                 </button>
                 <div class="carousel__track-container">
                     <ul class="carousel__track">
-                        <li id="bestCatM0" class="carousel__slide"></li>
-                        <li id="bestCatM1" class="carousel__slide"></li>
-                        <li id="bestCatM2" class="carousel__slide"></li>
-                        <li id="bestCatM3" class="carousel__slide"></li>
-                        <li id="bestCatM4" class="carousel__slide"></li>
-                        <li id="bestCatM5" class="carousel__slide"></li>
-                        <li id="bestCatM6" class="carousel__slide"></li>
+                        <li id="BCatM0" class="carousel__slide"></li>
+                        <li id="BCatM1" class="carousel__slide"></li>
+                        <li id="BCatM2" class="carousel__slide"></li>
+                        <li id="BCatM3" class="carousel__slide"></li>
+                        <li id="BCatM4" class="carousel__slide"></li>
+                        <li id="BCatM5" class="carousel__slide"></li>
+                        <li id="BCatM6" class="carousel__slide"></li>
                     </ul>
                 </div>
                 <button class="carousel__button carousel__button--right">
@@ -57,13 +57,13 @@
                 </button>
                 <div class="carousel__track-container">
                     <ul class="carousel__track">
-                        <li id="cat1M0" class="carousel__slide"></li>
-                        <li id="cat1M1" class="carousel__slide"></li>
-                        <li id="cat1M2" class="carousel__slide"></li>
-                        <li id="cat1M3" class="carousel__slide"></li>
-                        <li id="cat1M4" class="carousel__slide"></li>
-                        <li id="cat1M5" class="carousel__slide"></li>
-                        <li id="cat1M6" class="carousel__slide"></li>
+                        <li id="C1M0" class="carousel__slide"></li>
+                        <li id="C1M1" class="carousel__slide"></li>
+                        <li id="C1M2" class="carousel__slide"></li>
+                        <li id="C1M3" class="carousel__slide"></li>
+                        <li id="C1M4" class="carousel__slide"></li>
+                        <li id="C1M5" class="carousel__slide"></li>
+                        <li id="C1M6" class="carousel__slide"></li>
                     </ul>
                 </div>
                 <button class="carousel__button carousel__button--right">
@@ -79,13 +79,13 @@
                 </button>
                 <div class="carousel__track-container">
                     <ul class="carousel__track">
-                        <li id="cat2M0" class="carousel__slide"></li>
-                        <li id="cat2M1" class="carousel__slide"></li>
-                        <li id="cat2M2" class="carousel__slide"></li>
-                        <li id="cat2M3" class="carousel__slide"></li>
-                        <li id="cat2M4" class="carousel__slide"></li>
-                        <li id="cat2M5" class="carousel__slide"></li>
-                        <li id="cat2M6" class="carousel__slide"></li>
+                        <li id="C2M0" class="carousel__slide"></li>
+                        <li id="C2M1" class="carousel__slide"></li>
+                        <li id="C2M2" class="carousel__slide"></li>
+                        <li id="C2M3" class="carousel__slide"></li>
+                        <li id="C2M4" class="carousel__slide"></li>
+                        <li id="C2M5" class="carousel__slide"></li>
+                        <li id="C2M6" class="carousel__slide"></li>
                     </ul>
                 </div>
                 <button class="carousel__button carousel__button--right">
@@ -101,13 +101,13 @@
                 </button>
                 <div class="carousel__track-container">
                     <ul class="carousel__track">
-                        <li id="cat3M0" class="carousel__slide"></li>
-                        <li id="cat3M1" class="carousel__slide"></li>
-                        <li id="cat3M2" class="carousel__slide"></li>
-                        <li id="cat3M3" class="carousel__slide"></li>
-                        <li id="cat3M4" class="carousel__slide"></li>
-                        <li id="cat3M5" class="carousel__slide"></li>
-                        <li id="cat3M6" class="carousel__slide"></li>
+                        <li id="C3M0" class="carousel__slide"></li>
+                        <li id="C3M1" class="carousel__slide"></li>
+                        <li id="C3M2" class="carousel__slide"></li>
+                        <li id="C3M3" class="carousel__slide"></li>
+                        <li id="C3M4" class="carousel__slide"></li>
+                        <li id="C3M5" class="carousel__slide"></li>
+                        <li id="C3M6" class="carousel__slide"></li>
                     </ul>
                 </div>
                 <button class="carousel__button carousel__button--right">
@@ -122,19 +122,30 @@
         <div class="modal">
             <div class="modalContent">
                 <div class="modalInformation">
-                    <h2> Titre: <div id="modalTitle"></div></h2>
-                    <h2>Genre: <div id="modalGenre"></div></h2>
-                    <h2>Date de sortie: <div id="modalDate"></div></h2>
-                    <h2>Rating: <div id="modalRating"></div></h2>
-                    <h2>Score Imdb: <div id="modalImdb"></div></h2>
-                    <h2>Réalisateur: <div id="modalRealisator"></div></h2>
-                    <h2>Acteurs: <div id="modalActors"></div></h2>
-                    <h2>Durée: <div id="modalDuration"></div></h2>
-                    <h2>Parys d'origine: <div id="modalOrigin"></div></h2>
-                    <h2>Résultats au Box office: <div id="modalBoxoffice"></div></h2>
-                    <h2>Résumé: <div id="modalSynopsis"></div></h2>
+                    <h2> Titre: <div class="modalInfoContent" id="modalTitle"></div>
+                    </h2>
+                    <h2>Genre: <div class="modalInfoContent" id="modalGenre"></div>
+                    </h2>
+                    <h2>Date de sortie: <div class="modalInfoContent" id="modalDate"></div>
+                    </h2>
+                    <h2>Rating: <div class="modalInfoContent" id="modalRating"></div>
+                    </h2>
+                    <h2>Score Imdb: <div class="modalInfoContent" id="modalImdb"></div>
+                    </h2>
+                    <h2>Réalisateur: <div class="modalInfoContent" id="modalRealisator"></div>
+                    </h2>
+                    <h2>Acteurs: <div class="modalInfoContent" id="modalActors"></div>
+                    </h2>
+                    <h2>Durée: <div class="modalInfoContent" id="modalDuration"></div>
+                    </h2>
+                    <h2>Parys d'origine: <div class="modalInfoContent" id="modalOrigin"></div>
+                    </h2>
+                    <h2>Résultats au Box office: <div class="modalInfoContent" id="modalBoxoffice"></div>
+                    </h2>
+                    <h2>Résumé: <div class="modalInfoContent" id="modalSynopsis"></div>
+                    </h2>
                 </div>
-                <div class="modalPicture"></div>
+                <div class="modalPictureContainer"></div>
             </div>
             <button id="closeModale">Cliquez Ici pour fermer la fenêtre</button>
         </div>
