@@ -10,7 +10,6 @@
   - [General Information](#general-information)
   - [Features](#features)
   - [Setup](#setup)
-  - [Usage](#usage)
   - [Project Status](#project-status)
 
 ## General Information
