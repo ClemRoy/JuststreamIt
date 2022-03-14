@@ -1,3 +1,9 @@
 node_modules/
 package.json
 package-lock.json
+eslintrc.js
+eslintcache
+.eslintrc.js
+.eslintcache.js
+.eslintcache
+.eslintrc
